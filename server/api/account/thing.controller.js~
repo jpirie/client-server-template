@@ -1,0 +1,49 @@
+/**
+ * Using Rails-like standard naming convention for endpoints.
+ * GET     /things              ->  index
+ * POST    /things              ->  create
+ * GET     /things/:id          ->  show
+ * PUT     /things/:id          ->  update
+ * DELETE  /things/:id          ->  destroy
+ */
+
+'use strict';
+
+var _ = require('lodash');
+
+exports.index = function(req, res) {
+    res.json([
+        {
+            name : 'Development Tools',
+            info : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
+        }
+    ]);
+};
+
+/* POST
+ * TODO: How do we create an account safely? Client should not be allowed to spam this. */
+exports.create = function(req, res) {
+    res.json([
+        {
+            name : 'For creation of accounts'
+        }
+    ]);
+};
+
+/* DELETE */
+exports.destroy = function(req, res) {
+    res.json([
+        {
+            name : 'For deletion of accounts'
+        }
+    ]);
+};
+
+/* PUT */
+exports.modify = function(req, res) {
+    res.json([
+        {
+            name : 'For modification of accounts'
+        }
+    ]);
+};

@@ -1,0 +1,11 @@
+block content
+  div.container
+    div.row
+      div.col-sm-6.col-md-4.col-md-offset-4
+        h1.text-center.login-title Existing user:
+          div.account-wall
+          //test the username
+          if username
+            h1.text-center.error-message Got a name #{username}
+          else
+            h1.text-center.error-message No name.
